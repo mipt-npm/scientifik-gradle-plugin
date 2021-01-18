@@ -79,7 +79,7 @@ open class KScienceCommonPlugin : Plugin<Project> {
                 jvm {
                     compilations.all {
                         kotlinOptions {
-//                        useIR = true
+                            useIR = true
                             jvmTarget = KScienceVersions.JVM_TARGET.toString()
                         }
                     }
@@ -134,7 +134,7 @@ open class KScienceCommonPlugin : Plugin<Project> {
             tasks.apply {
                 withType<KotlinJvmCompile> {
                     kotlinOptions {
-                        //                useIR = true
+                        useIR = true
                         jvmTarget = KScienceVersions.JVM_TARGET.toString()
                     }
                 }
