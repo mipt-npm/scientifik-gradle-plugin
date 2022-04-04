@@ -44,7 +44,7 @@ public fun Project.configureKScience(
         tasks.withType<KotlinJvmCompile> {
             kotlinOptions {
                 jvmTarget = KScienceVersions.JVM_TARGET.toString()
-                freeCompilerArgs = freeCompilerArgs + defaultJvmArgs
+                freeCompilerArgs = freeCompilerArgs + defaultJvmArgs + "-Xcontext-receivers"
             }
         }
 
@@ -137,6 +137,14 @@ public fun Project.configureKScience(
                 val jsTest by getting {
                     dependencies {
                         implementation(kotlin("test-js"))
+                    }
+                }
+            }
+
+            targets.all {
+                compilations.all {
+                    kotlinOptions {
+                        freeCompilerArgs = freeCompilerArgs + "-Xcontext-receivers"
                     }
                 }
             }
