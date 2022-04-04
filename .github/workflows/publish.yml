@@ -19,6 +19,6 @@ jobs:
       - uses: gradle/gradle-build-action@v2.1.5
         with:
           arguments: |
-          publishAllPublicationsToSpaceRepository
-          -Ppublishing.space.user=${{ secrets.SPACE_APP_ID }}
-          -Ppublishing.space.token=${{ secrets.SPACE_APP_SECRET }}
+            publishAllPublicationsToSpaceRepository
+            -Ppublishing.space.user=${{ secrets.SPACE_APP_ID }}
+            -Ppublishing.space.token=${{ secrets.SPACE_APP_SECRET }}
