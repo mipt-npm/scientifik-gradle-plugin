@@ -25,6 +25,8 @@ internal fun LanguageSettingsBuilder.applySettings(
     optIn("kotlin.time.ExperimentalTime")
     optIn("kotlin.contracts.ExperimentalContracts")
     optIn("kotlin.js.ExperimentalJsExport")
+
+    enableLanguageFeature("ContextReceivers")
 }
 
 internal fun RepositoryHandler.applyRepos() {
